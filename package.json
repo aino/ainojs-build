@@ -1,6 +1,6 @@
 {
   "name": "ainojs-build",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build scripts for Aino JavaScript Tools",
   "repository": {
     "type": "git",
