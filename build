@@ -1,2 +1,16 @@
 #!/bin/bash
-eval "./node_modules/.bin/gulp $1"
+cd "../ainojs-$1"
+if git diff-index --quiet HEAD --; then
+    echo "No changes to $1, build canceled"
+else
+  echo "$1 has changed, start build"
+  cd "../ainojs-build"
+  eval "./node_modules/.bin/gulp $1"
+  cd "../ainojs-$1"
+  npm version patch
+  VERSION=$(git describe --tags)
+  git add .
+  eval "git commit -am $VERSION"
+  git push origin master
+  npm publish
+fi
