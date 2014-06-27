@@ -1,0 +1,33 @@
+{
+  "name": "ainojs-build",
+  "version": "1.0.0",
+  "description": "Build scripts for Aino JavaScript Tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aino/ainojs-build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ainojs-finger": "^1.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/aino/ainojs-build/issues"
+  },
+  "homepage": "https://github.com/aino/ainojs-build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aino",
+  "devDependencies": {
+    "event-stream": "^3.1.5",
+    "gulp": "^3.8.1",
+    "gulp-buffer": "0.0.2",
+    "gulp-concat": "^2.2.0",
+    "gulp-util": "^2.2.17",
+    "underscore": "^1.6.0",
+    "vinyl-map": "^1.0.1",
+    "vinyl-source-stream": "^0.1.1",
+    "browserify": "^4.2.0"
+  }
+}
