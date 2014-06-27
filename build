@@ -7,10 +7,11 @@ else
   cd "../ainojs-build"
   eval "./node_modules/.bin/gulp $1"
   cd "../ainojs-$1"
-  npm version patch
   VERSION=$(git describe --tags)
   git add .
-  eval "git commit -am $VERSION"
+  eval "git commit -am 'Building from version $VERSION'"
+  npm version patch
   git push origin master
+  git push --tags
   npm publish
 fi
