@@ -39,6 +39,8 @@ modules.forEach(function(module) {
     },{
       debug: false,
       standalone: upper
+    }, {
+      external: ["react", "jquery", "underscore", "backbone"]
     })
     .on('error', function(trace) {
       console.error(trace)
