@@ -11,7 +11,7 @@ var path = require('path')
 var uglify = require('gulp-uglify')
 var moment = require('moment')
 
-var modules = ['animation', 'easing', 'finger', 'requestframe', 'events']
+var modules = ['animation', 'easing', 'finger', 'requestframe', 'events', 'react-editor']
 
 var gulpBrowserify = function(options, bundleOptions, commands) {
   var b
