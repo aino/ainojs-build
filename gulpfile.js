@@ -11,7 +11,19 @@ var path = require('path')
 var uglify = require('gulp-uglify')
 var moment = require('moment')
 
-var modules = ['animation', 'easing', 'finger', 'requestframe', 'events', 'react-editor']
+var modules = [
+  'animation', 
+  'easing', 
+  'finger', 
+  'requestframe', 
+  'events', 
+  'react-editor', 
+  'ajax', 
+  'detect', 
+  'dimensions',
+  'lipsum',
+  'pubsub'
+]
 
 var gulpBrowserify = function(options, bundleOptions, commands) {
   var b
@@ -50,7 +62,7 @@ modules.forEach(function(module) {
     gulp.task([module,method].join('-'), function() {
       gutil.log('Building '+module)
       var upper = module.charAt(0).toUpperCase() + module.substr(1)
-      var src = path.join('../', 'ainojs-'+module, module+'.js')
+      var src = path.join('../', 'ainojs-'+module, 'index.js')
       gulpBrowserify({
         entries: src
       },{
