@@ -74,7 +74,7 @@ modules.forEach(function(module) {
       .on('error', function(trace) {
         console.error(trace)
       })
-      .pipe(source())
+      .pipe(source(src))
       .pipe(buffer())
       .pipe(uglify())
       .pipe(map(function(data, file) {
