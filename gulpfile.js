@@ -22,7 +22,8 @@ var modules = [
   'detect', 
   'dimensions',
   'lipsum',
-  'pubsub'
+  'pubsub',
+  'html'
 ]
 
 var gulpBrowserify = function(options, bundleOptions, commands) {
