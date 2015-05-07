@@ -23,7 +23,8 @@ var modules = [
   'dimensions',
   'lipsum',
   'pubsub',
-  'html'
+  'html',
+  'react-image'
 ]
 
 var gulpBrowserify = function(options, bundleOptions, commands) {
